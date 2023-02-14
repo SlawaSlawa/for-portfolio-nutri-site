@@ -28,6 +28,30 @@ a {
     padding-left: 14px;
 }
 
+@media (max-width: 1620px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1000px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 788px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
 @font-face {
     font-family: "League Spartan";
   src: url("../fonts/league-spartan/LeagueSpartan-Regular.woff2") format("woff2"), url("../fonts/league-spartan/LeagueSpartan-Regular.woff") format("woff");
@@ -69,6 +93,7 @@ a {
     box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.2);
     padding-top: 14px;
     padding-bottom: 15px;
+    overflow: hidden;
 }
 
 .container--header {
@@ -134,4 +159,199 @@ a {
     border-radius: 5px;
     bottom: -21px;
     left: 0;
+}
+
+@media (max-width: 1620px) {
+    .container--header {
+        max-width: 1200px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .header__nav-link {
+        font-size: 28px;
+    }
+
+    .header__nav-link--active {
+        font-size: 30px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1400px) {
+    .header__nav-link,
+  .header__nav-link--active {
+        font-size: 26px;
+    }
+
+    .header__nav-list {
+        margin-top: 0;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container--header {
+        max-width: 1000px;
+    }
+
+    .header__nav-link,
+  .header__nav-link--active {
+        font-size: 24px;
+    }
+
+    .header__nav-link--active:before {
+        height: 5px;
+        bottom: -15px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__nav-list {
+        gap: 40px;
+    }
+
+    .header__nav-link,
+  .header__nav-link--active {
+        font-size: 20px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .container--header {
+        max-width: 788px;
+    }
+
+    .logo {
+        width: 100px;
+        height: auto;
+    }
+
+    .header__nav-list {
+        gap: 28px;
+    }
+
+    .header__nav-link,
+  .header__nav-link--active {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container--header {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 724px) {
+    .header {
+        position: relative;
+    }
+
+    .header__nav {
+        position: fixed;
+        box-shadow: 0 4px 37px rgba(0, 0, 0, 0.2);
+        width: 280px;
+        top: 0;
+        right: -100%;
+        transition: right 0.3s ease;
+    }
+
+    .header__nav-list {
+        background-color: #fff;
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .header__nav--active {
+        top: 0;
+        right: 0;
+        transition: right 0.3s ease;
+    }
+
+    .burger {
+        display: block;
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        right: 48px;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .burger:before,
+  .burger:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(180.61deg, #98D67D 0.45%, #569F36 99.39%);
+        position: absolute;
+        border-radius: 5px;
+        transition: transform 0.3s ease;
+    }
+
+    .burger:before {
+        top: 0;
+        left: 0;
+    }
+
+    .burger:after {
+        content: "";
+        bottom: 0;
+        left: 0;
+    }
+
+    .burger__row {
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        background: linear-gradient(180.61deg, #98D67D 0.45%, #569F36 99.39%);
+        border-radius: 5px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .burger--active {
+        top: 28px;
+        right: 10px;
+    }
+
+    .burger--active .burger__row {
+        display: none;
+    }
+
+    .burger--active.burger:before {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+
+    .burger--active.burger:after {
+        bottom: 50%;
+        transform: translateY(50%) rotate(-45deg);
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        background-image: none;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .burger {
+        right: 10px;
+    }
+
+    .header__nav {
+        width: 100%;
+    }
 }
