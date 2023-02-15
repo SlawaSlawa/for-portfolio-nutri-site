@@ -124,6 +124,7 @@ a {
 }
 
 .header {
+    position: relative;
     background-color: #fff;
     background-image: url("../images/header-bg.png");
     background-size: 100%;
@@ -133,6 +134,7 @@ a {
     padding-top: 14px;
     padding-bottom: 15px;
     overflow: hidden;
+    z-index: 100;
 }
 
 .container--header {
