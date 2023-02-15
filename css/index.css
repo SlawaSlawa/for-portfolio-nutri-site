@@ -1,3 +1,35 @@
+@font-face {
+    font-family: "League Spartan";
+    src: url("../fonts/league-spartan/LeagueSpartan-Regular.woff2") format("woff2"), url("../fonts/league-spartan/LeagueSpartan-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "League Spartan";
+  src: url("../fonts/league-spartan/LeagueSpartan-SemiBold.woff2") format("woff2"), url("../fonts/league-spartan/LeagueSpartan-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+  src: url("../fonts/segoe-ui/SegoeUI-Bold.woff2") format("woff2"), url("../fonts/segoe-ui/SegoeUI-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: "Segoe UI";
+  src: url("../fonts/segoe-ui/SegoeUI.woff2") format("woff2"), url("../fonts/segoe-ui/SegoeUI.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -28,6 +60,45 @@ a {
     padding-left: 14px;
 }
 
+.section__title {
+    font-family: "League Spartan", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 68px;
+    color: #86B472;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section__title-more {
+    display: block;
+    font-weight: 400;
+}
+
+.section__description {
+    margin-bottom: 30px;
+}
+
+.btn {
+    cursor: pointer;
+    background: linear-gradient(180.61deg, #98D67D 0.45%, #569F36 99.39%);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    box-shadow: 0px 1px 20px rgba(134, 180, 114, 0.69);
+    border: none;
+    border-radius: 10px;
+    padding: 16px 48px;
+    transition: opacity 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
 @media (max-width: 1620px) {
     .container {
         max-width: 1200px;
@@ -50,38 +121,6 @@ a {
     .container {
         max-width: 100%;
     }
-}
-
-@font-face {
-    font-family: "League Spartan";
-  src: url("../fonts/league-spartan/LeagueSpartan-Regular.woff2") format("woff2"), url("../fonts/league-spartan/LeagueSpartan-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: "League Spartan";
-  src: url("../fonts/league-spartan/LeagueSpartan-SemiBold.woff2") format("woff2"), url("../fonts/league-spartan/LeagueSpartan-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: "Segoe UI";
-  src: url("../fonts/segoe-ui/SegoeUI-Bold.woff2") format("woff2"), url("../fonts/segoe-ui/SegoeUI-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-    font-family: "Segoe UI";
-  src: url("../fonts/segoe-ui/SegoeUI.woff2") format("woff2"), url("../fonts/segoe-ui/SegoeUI.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
 }
 
 .header {
@@ -354,4 +393,98 @@ a {
     .header__nav {
         width: 100%;
     }
+}
+
+.hero {
+    background-color: #f4fbf1;
+    background-image: url("../images/hero-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    padding-top: 262px;
+    padding-bottom: 287px;
+}
+
+.hero__wrapper {
+    max-width: 636px;
+}
+
+.hero__comment {
+    position: absolute;
+    width: 300px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-bottom: 42px;
+    padding-left: 30px;
+    z-index: 10;
+}
+
+.hero__comment::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 9px 50px rgba(0, 0, 0, 0.17);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: skew(15deg);
+    z-index: -1;
+}
+
+.hero__comment--one {
+    bottom: 335px;
+    right: 41%;
+}
+
+.hero__comment--two {
+    bottom: 202px;
+    right: 78px;
+}
+
+.hero__comment-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.hero__comment-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.hero__comment-name {
+    font-family: "Segoe UI";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hero__comment-ratings {
+    display: flex;
+    align-items: center;
+}
+
+.hero__comment-star {
+    width: 12px;
+    height: 12px;
+    margin-right: 3px;
+    background-image: url("../images/comments-avatars/star.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero__comment-description {
+    font-size: 12px;
+    line-height: 16px;
+    color: #000000;
 }

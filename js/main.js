@@ -10,10 +10,5 @@ burgerBtn.addEventListener('click', () => {
         navMenu.classList.add('header__nav--active')
     }
 })
-
-
-
-// header__nav--active
-// burger--active
 console.log('script2');
 console.log('script3!');
