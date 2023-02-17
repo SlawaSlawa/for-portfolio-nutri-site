@@ -140,102 +140,169 @@
 
         <section class="menu">
             <div class="container">
-                <h2 class="section__title">
-                    Fresh Healthy
-                    <span class="section__title-more">Delicious Foods</span>
-                </h2>
-                <h3 class="section__subtitle">
-                    We Made Fresh and Healthy Foods...
-                </h3>
-
-                <ul class="menu__list">
-                    <li class="menu__item">
-                        <button class="menu__item-btn">Breakfast</button>
-                        <img src="" alt="Arrow" class="menu__arrow" />
-                    </li>
-                    <li class="menu__item">
-                        <button class="menu__item-btn">Lunch</button>
-                        <img src="" alt="Arrow" class="menu__arrow" />
-                    </li>
-                    <li class="menu__item">
-                        <button class="menu__item-btn">Dinner</button>
-                        <img src="" alt="Arrow" class="menu__arrow" />
-                    </li>
-                </ul>
-
-                <div class="menu__slider">
-                    <div class="menu__slider-item">
-                        <div class="menu__slider-slide">
-                            <img
-                                src="./images/menu/menu-1.png"
-                                alt="Black Souce Pasta"
-                                class="menu__slider-img"
-                            />
-                            <h3 class="menu__slider-title">
-                                Black Souce Pasta
-                            </h3>
-                            <p class="menu__slider-description">
-                                Mix Vegetabale Pasta...
-                            </p>
-                            <button class="btn-more">></button>
-                        </div>
-                        <!-- /menu__slider-slide -->
-                        <div class="menu__slider-slide">
-                            <img
-                                src="./images/menu/menu-2.png"
-                                alt="Green Leaf Salad"
-                                class="menu__slider-img"
-                            />
-                            <h3 class="menu__slider-title">Green Leaf Salad</h3>
-                            <p class="menu__slider-description">
-                                Leaf with tomato & onion...
-                            </p>
-                            <button class="btn-more">></button>
-                        </div>
-                        <!-- /menu__slider-slide -->
-                        <div class="menu__slider-slide">
-                            <img
-                                src="./images/menu/menu-3.png"
-                                alt="Black Souce Pasta"
-                                class="menu__slider-img"
-                            />
-                            <h3 class="menu__slider-title">White Meat Salad</h3>
-                            <p class="menu__slider-description">
-                                Tomato & Veggies...
-                            </p>
-                            <button class="btn-more">></button>
-                        </div>
-                        <!-- /menu__slider-slide -->
-                        <div class="menu__slider-slide">
-                            <img
-                                src="./images/menu/menu-4.png"
-                                alt="Black Souce Pasta"
-                                class="menu__slider-img"
-                            />
-                            <h3 class="menu__slider-title">Cacumber Salad</h3>
-                            <p class="menu__slider-description">
-                                Cacumber, Orange, etc...
-                            </p>
-                            <button class="btn-more">></button>
-                        </div>
-                        <!-- /menu__slider-slide -->
+                <div class="menu__wrapper">
+                    <div class="menu__text">
+                        <h2 class="section__title">
+                            Fresh Healthy
+                            <span class="section__title-more"
+                                >Delicious Foods</span
+                            >
+                        </h2>
+                        <h3 class="section__subtitle">
+                            We Made Fresh and Healthy Foods...
+                        </h3>
                     </div>
-                    <!-- menu__slider-item -->
+                    <!-- /menu__text -->
+                    <div class="menu__slider">
+                        <ul class="menu__list">
+                            <li class="menu__item menu__item--active">
+                                <button class="menu__item-btn">
+                                    Breakfast
+                                    <img
+                                        src="./images/arrow-breakfast.svg"
+                                        alt="Arrow"
+                                        class="menu__arrow menu__arrow--one"
+                                    />
+                                </button>
+                            </li>
+                            <li class="menu__item">
+                                <button class="menu__item-btn">
+                                    Lunch
+                                    <img
+                                        src="./images/arrow-lunch.svg"
+                                        alt="Arrow"
+                                        class="menu__arrow menu__arrow--two"
+                                    />
+                                </button>
+                            </li>
+                            <li class="menu__item">
+                                <button class="menu__item-btn">
+                                    Dinner
+                                    <img
+                                        src="./images/arrow-dinner.svg"
+                                        alt="Arrow"
+                                        class="menu__arrow menu__arrow--three"
+                                    />
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="menu__slider-item">
+                            <div class="menu__slider-slide">
+                                <picture class="menu__slider-img">
+                                    <img
+                                        src="./images/menu/menu-1.png"
+                                        alt="Black Souce Pasta"
+                                    />
+                                </picture>
 
-                    <button
-                        class="menu__slider-btn menu__slider-btn--prev"
-                        aria-label="Prev slide"
-                    >
-                        &lt;
-                    </button>
-                    <button
-                        class="menu__slider-btn menu__slider-btn--next"
-                        aria-label="Next slide"
-                    >
-                        &gt;
-                    </button>
+                                <h3 class="menu__slider-title">
+                                    Black Souce Pasta
+                                </h3>
+                                <p class="menu__slider-description">
+                                    Mix Vegetabale Pasta...
+                                </p>
+                                <button class="btn-more">
+                                    <picture class="btn-more__img">
+                                        <img
+                                            src="./images/btn-more.svg"
+                                            alt="More"
+                                        />
+                                    </picture>
+                                </button>
+                            </div>
+                            <!-- /menu__slider-slide -->
+                            <div class="menu__slider-slide">
+                                <picture class="menu__slider-img">
+                                    <img
+                                        src="./images/menu/menu-2.png"
+                                        alt="Green Leaf Salad"
+                                    />
+                                </picture>
+                                <h3 class="menu__slider-title">
+                                    Green Leaf Salad
+                                </h3>
+                                <p class="menu__slider-description">
+                                    Leaf with tomato & onion...
+                                </p>
+                                <button class="btn-more">
+                                    <picture class="btn-more__img">
+                                        <img
+                                            src="./images/btn-more.svg"
+                                            alt="More"
+                                        />
+                                    </picture>
+                                </button>
+                            </div>
+                            <!-- /menu__slider-slide -->
+                            <div class="menu__slider-slide">
+                                <picture class="menu__slider-img">
+                                    <img
+                                        src="./images/menu/menu-3.png"
+                                        alt="Black Souce Pasta"
+                                    />
+                                </picture>
+                                <h3 class="menu__slider-title">
+                                    White Meat Salad
+                                </h3>
+                                <p class="menu__slider-description">
+                                    Tomato & Veggies...
+                                </p>
+                                <button class="btn-more">
+                                    <picture class="btn-more__img">
+                                        <img
+                                            src="./images/btn-more.svg"
+                                            alt="More"
+                                        />
+                                    </picture>
+                                </button>
+                            </div>
+                            <!-- /menu__slider-slide -->
+                            <div class="menu__slider-slide">
+                                <picture class="menu__slider-img">
+                                    <img
+                                        src="./images/menu/menu-4.png"
+                                        alt="Black Souce Pasta"
+                                    />
+                                </picture>
+                                <h3 class="menu__slider-title">
+                                    Cacumber Salad
+                                </h3>
+                                <p class="menu__slider-description">
+                                    Cacumber, Orange, etc...
+                                </p>
+                                <button class="btn-more">
+                                    <picture class="btn-more__img">
+                                        <img
+                                            src="./images/btn-more.svg"
+                                            alt="More"
+                                        />
+                                    </picture>
+                                </button>
+                            </div>
+                            <!-- /menu__slider-slide -->
+                        </div>
+                        <!-- menu__slider-item -->
+
+                        <button
+                            class="menu__slider-btn menu__slider-btn--prev"
+                            aria-label="Prev slide"
+                        >
+                            <picture class="menu__slider-arrow">
+                                <img src="./images/arrow-prev.svg" alt="Prev" />
+                            </picture>
+                        </button>
+                        <button
+                            class="menu__slider-btn menu__slider-btn--next"
+                            aria-label="Next slide"
+                        >
+                            <picture class="menu__slider-arrow">
+                                <img src="./images/arrow-next.svg" alt="Next" />
+                            </picture>
+                        </button>
+                    </div>
+                    <!-- /menu__slider -->
                 </div>
-                <!-- /menu__slider -->
+                <!-- /menu__wrapper -->
             </div>
         </section>
         <!-- /MENU -->
