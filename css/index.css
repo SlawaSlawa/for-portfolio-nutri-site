@@ -437,13 +437,20 @@ button {
 }
 
 .menu__text {
-   width: 50%;
+   width: 45%;
+}
+
+.menu__list {
+   position: relative;
+   z-index: 200;
 }
 
 .menu__slider {
    position: relative;
 
-   width: 50%;
+   width: 55%;
+   padding-right: 60px;
+   padding-bottom: 60px;
 }
 
 .menu__slider-item {
@@ -610,6 +617,7 @@ button {
 
 .menu__slider-btn {
    position: absolute;
+   z-index: 200;
    bottom: 0;
 
    display: -webkit-box;
@@ -657,11 +665,36 @@ button {
    height: 16px;
 }
 
-.menu__slider-arrow img {
+.menu__slider-arrow svg {
    display: block;
 
    width: 100%;
    height: 100%;
+}
+
+.menu__slider-btn path {
+   stroke: #fff;
+}
+
+.menu__slider-btn.swiper-button-disabled {
+   border: 3px solid #86b472;
+   background: transparent;
+   -webkit-box-shadow: none;
+           box-shadow: none;
+}
+
+.menu__slider-btn.swiper-button-disabled:hover {
+   cursor: default;
+
+   opacity: 1;
+}
+
+.menu__slider-btn.swiper-button-disabled path {
+   stroke: #000;
+}
+
+.benefits__item {
+   position: relative;
 }
 
 @media (max-width: 1800px) {

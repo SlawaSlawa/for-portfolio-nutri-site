@@ -10,5 +10,11 @@ burgerBtn.addEventListener('click', () => {
         navMenu.classList.add('header__nav--active')
     }
 })
-console.log('script2');
+const menuSlider = new Swiper('.swiper', {
+    spaceBetween: 100,
+    navigation: {
+        nextEl: '.menu__slider-btn--next',
+        prevEl: '.menu__slider-btn--prev',
+    },
+});
 console.log('script3!');
