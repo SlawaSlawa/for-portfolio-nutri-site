@@ -704,6 +704,21 @@ button {
    padding-bottom: 72px;
 }
 
+.ingridients {
+   padding-top: 205px;
+   padding-bottom: 280px;
+
+   background-color: #f4fbf1;
+   background-image: url("../images/ingridients-bg.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+.ingridients-wrapper {
+   max-width: 590px;
+}
+
 .benefits__item {
    position: relative;
 }
@@ -748,6 +763,26 @@ button {
 
    .menu__slider-slide {
       width: 240px;
+   }
+
+   .ingridients {
+      padding-top: 120px;
+      padding-bottom: 140px;
+
+      background-size: 100%;
+   }
+
+   .ingridients-wrapper {
+      padding: 20px;
+
+      border-radius: 5px;
+      background-color: rgba(255, 255, 255, .56);
+   }
+}
+
+@media (max-width: 1560px) {
+   .ingridients {
+      background-size: cover;
    }
 }
 
@@ -981,6 +1016,37 @@ button {
    .menu__slider-slide:nth-child(3) {
       margin-top: 0;
    }
+
+   .ingridients {
+      position: relative;
+
+      padding-top: 50px;
+      padding-bottom: 50px;
+   }
+
+   .ingridients::before {
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      left: 0;
+
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      content: "";
+
+      background-color: rgba(255, 255, 255, .56);
+   }
+
+   .ingridients-wrapper {
+      position: relative;
+      z-index: 100;
+
+      border-radius: 0;
+      background-color: transparent;
+   }
 }
 
 @media (max-width: 724px) {
@@ -1177,6 +1243,18 @@ button {
 
    .menu__item-btn {
       font-size: 22px;
+   }
+
+   .ingridients-wrapper {
+      width: 100%;
+   }
+
+   .btn--see,
+   .btn--more {
+      width: 100%;
+      margin-bottom: 20px;
+
+      text-align: center;
    }
 }
 
