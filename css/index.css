@@ -874,6 +874,124 @@ button {
    justify-content: space-between;
 }
 
+.personal {
+   padding-top: 100px;
+   padding-bottom: 100px;
+
+   background-color: #f4fbf1;
+   background-image: url("../images/personal-bg.jpg");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+.personal__wrapper {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+
+.personal__list {
+   margin-bottom: 23px;
+}
+
+.personal__list-item {
+   position: relative;
+
+   margin-bottom: 7px;
+   padding-left: 34px;
+}
+
+.personal__list-item::before {
+   position: absolute;
+   top: 50%;
+   left: 0;
+
+   display: block;
+
+   width: 18px;
+   height: 18px;
+
+   content: "";
+   -webkit-transform: translateY(-50%);
+       -ms-transform: translateY(-50%);
+           transform: translateY(-50%);
+
+   border-radius: 50%;
+   background: -o-linear-gradient(269.39deg, #98d67d .45%, #569f36 99.39%);
+   background:    linear-gradient(180.61deg, #98d67d .45%, #569f36 99.39%);
+   -webkit-box-shadow: 0 4px 14px rgba(136, 219, 10, .5);
+           box-shadow: 0 4px 14px rgba(136, 219, 10, .5);
+}
+
+.btn--personal {
+   min-width: 250px;
+}
+
+.personal__img-block {
+   position: relative;
+}
+
+.personal__item {
+   position: absolute;
+
+   width: 190px;
+   height: 178px;
+   padding: 20px;
+
+   text-align: center;
+
+   color: #545454;
+   border-radius: 15px;
+   background: -o-linear-gradient(291.75deg, #e1ecdc 27.9%, #fff 90.49%);
+   background:    linear-gradient(158.25deg, #e1ecdc 27.9%, #fff 90.49%);
+   -webkit-box-shadow: 0 15px 50px rgba(51, 114, 25, .2);
+           box-shadow: 0 15px 50px rgba(51, 114, 25, .2);
+}
+
+.personal__item--one {
+   bottom: 55px;
+   left: -75px;
+}
+
+.personal__item--two {
+   bottom: -73px;
+   left: 224px;
+}
+
+.personal__item--three {
+   right: 0;
+   bottom: 55px;
+}
+
+.personal__item-title {
+   font-size: 28px;
+   line-height: 37px;
+
+   margin-top: 0;
+   margin-bottom: 5px;
+}
+
+.personal__item-number {
+   font-size: 48px;
+   font-weight: 600;
+   line-height: 64px;
+
+   margin-top: 0;
+}
+
+.personal__item-measure {
+   font-size: 20px;
+   line-height: 27px;
+}
+
 @media (max-width: 1800px) {
    .hero__comment--one {
       right: 37%;
