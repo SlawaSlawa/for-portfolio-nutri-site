@@ -55,3 +55,38 @@ for (let anchor of anchors) {
         })
     })
 }
+const menuItems  = document.querySelectorAll('.menu__slider .menu__item')
+const menuItemsForMin  = document.querySelectorAll('.menu__slider-min .menu__item')
+const menuBtns = document.querySelectorAll('.menu__item-btn')
+
+menuItems.forEach((item) => {
+    item.addEventListener('click', (evt) => {
+        const target = evt.target
+        const btnWrapper = target.closest('.menu__item')
+
+        menuItems.forEach((item, index) => {
+            item.classList.remove('menu__item--active')
+            menuItemsForMin[index].classList.remove('menu__item--active') 
+            if (item === btnWrapper) {
+                btnWrapper.classList.add('menu__item--active')
+                menuItemsForMin[index].classList.add('menu__item--active')
+            }  
+        })
+    })
+})
+
+menuItemsForMin.forEach((item) => {
+    item.addEventListener('click', (evt) => {
+        const target = evt.target
+        const btnWrapper = target.closest('.menu__item')
+
+        menuItemsForMin.forEach((item, index) => {
+            item.classList.remove('menu__item--active')
+            menuItems[index].classList.remove('menu__item--active') 
+            if (item === btnWrapper) {
+                btnWrapper.classList.add('menu__item--active')
+                menuItems[index].classList.add('menu__item--active')
+            }  
+        })
+    })
+})

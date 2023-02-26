@@ -544,6 +544,21 @@ button {
    color: #545454;
 }
 
+.menu__list {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+       flex-direction: column;
+
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -ms-flex-direction: column;
+}
+
+.menu__item {
+   display: inline-block;
+}
+
 .menu__item--active .menu__item-btn {
    position: relative;
 
@@ -591,10 +606,6 @@ button {
    color: #000;
    border: none;
    background-color: transparent;
-}
-
-.menu__item-btn:hover {
-   opacity: .6;
 }
 
 .menu__arrow {
@@ -1561,10 +1572,14 @@ button {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+          flex-direction: row;
 
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: row;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
