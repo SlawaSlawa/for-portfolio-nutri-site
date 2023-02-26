@@ -939,6 +939,18 @@ button {
    position: relative;
 }
 
+.personal__img {
+   display: block;
+
+   max-width: 685px;
+}
+
+.personal__img img {
+   display: block;
+
+   width: 100%;
+}
+
 .personal__item {
    position: absolute;
 
@@ -1056,6 +1068,22 @@ button {
    .benefits__container--top {
       margin-bottom: 114px;
    }
+
+   .personal__img {
+      max-width: 500px;
+   }
+
+   .personal__item--two {
+      left: 50%;
+
+      -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
+   }
+
+   .personal__item--three {
+      bottom: 122px;
+   }
 }
 
 @media (max-width: 1560px) {
@@ -1155,6 +1183,29 @@ button {
 
    .benefits__container--mid {
       margin-top: 0;
+   }
+
+   .personal__item {
+      width: 160px;
+      height: 172px;
+   }
+
+   .personal__item-title {
+      font-size: 26px;
+      line-height: 35px;
+   }
+
+   .personal__item-number {
+      font-size: 40px;
+      line-height: 56px;
+   }
+
+   .personal__item--one {
+      left: 0;
+   }
+
+   .personal__item--two {
+      left: 57%;
    }
 }
 
@@ -1276,6 +1327,52 @@ button {
    .benefits__container--mid {
       margin-top: 0;
    }
+
+   .personal__wrapper {
+      gap: 20px;
+   }
+
+   .personal__item {
+      height: auto;
+      padding: 10px;
+   }
+
+   .personal__item-title {
+      font-size: 24px;
+      line-height: 1;
+   }
+
+   .personal__item-number {
+      font-size: 32px;
+      line-height: 1;
+   }
+
+   .personal__item-measure {
+      font-size: 18px;
+      line-height: 24px;
+   }
+
+   .personal__list {
+      font-size: 18px;
+      line-height: 1;
+   }
+
+   .personal__list-item {
+      margin-bottom: 16px;
+      padding-left: 26px;
+   }
+
+   .personal__list-item::before {
+      top: 0;
+      left: 0;
+
+      width: 14px;
+      height: 14px;
+
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+   }
 }
 
 @media (max-width: 860px) {
@@ -1377,6 +1474,14 @@ button {
 
    .benefits__container--mid {
       margin-bottom: 114px;
+   }
+
+   .personal__wrapper {
+          flex-direction: column;
+
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
    }
 }
 
@@ -1586,6 +1691,22 @@ button {
       margin-bottom: 20px;
 
       text-align: center;
+   }
+
+   .personal__item {
+      width: 40%;
+   }
+
+   .personal__item-title {
+      font-size: 22px;
+   }
+
+   .personal__item-number {
+      font-size: 30px;
+   }
+
+   .personal__item-measure {
+      font-size: 16px;
    }
 }
 
