@@ -50,6 +50,8 @@ body {
    font-style: normal;
    line-height: 27px;
 
+   position: relative;
+
    color: #545454;
 }
 
@@ -721,6 +723,99 @@ button {
 
    width: 100%;
    padding-bottom: 72px;
+}
+
+.menu-overlay {
+   position: fixed;
+   z-index: 1000;
+   top: 0;
+   left: 0;
+
+   width: 100%;
+   height: 100%;
+
+   background-color: rgba(38, 62, 28, .8);
+}
+
+.menu-list {
+   margin-top: 20px;
+   margin-bottom: 23px;
+}
+
+.menu-list__item {
+   position: relative;
+
+   margin-bottom: 7px;
+   padding-left: 34px;
+}
+
+.menu-list__item::before {
+   position: absolute;
+   top: 50%;
+   left: 0;
+
+   display: block;
+
+   width: 18px;
+   height: 18px;
+
+   content: "";
+   -webkit-transform: translateY(-50%);
+       -ms-transform: translateY(-50%);
+           transform: translateY(-50%);
+
+   border-radius: 50%;
+   background: -o-linear-gradient(269.39deg, #98d67d .45%, #569f36 99.39%);
+   background:    linear-gradient(180.61deg, #98d67d .45%, #569f36 99.39%);
+   -webkit-box-shadow: 0 4px 14px rgba(136, 219, 10, .5);
+           box-shadow: 0 4px 14px rgba(136, 219, 10, .5);
+}
+
+.menu-modal {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+
+   width: 270px;
+   padding: 30px 20px;
+
+   -webkit-transform: translate(-50%, -50%);
+       -ms-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+
+   border-radius: 15px;
+   background: -o-linear-gradient(291.75deg, #e1ecdc 27.9%, #fff 90.49%);
+   background:    linear-gradient(158.25deg, #e1ecdc 27.9%, #fff 90.49%);
+   -webkit-box-shadow: 0 15px 50px rgba(51, 114, 25, .2);
+           box-shadow: 0 15px 50px rgba(51, 114, 25, .2);
+}
+
+.menu-close-btn {
+   font-weight: bold;
+   line-height: 1;
+
+   position: absolute;
+   top: 20px;
+   right: 20px;
+
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+
+   width: 30px;
+   height: 30px;
+
+   cursor: pointer;
+
+   border: 1px solid;
+   border-radius: 50%;
+
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
 }
 
 .ingridients {
@@ -1815,6 +1910,10 @@ button {
    .menu__slider-min {
       display: block;
    }
+
+   .menu__item-btn {
+      font-size: 22px;
+   }
 }
 
 @media (max-width: 610px) {
@@ -1880,10 +1979,6 @@ button {
 
    .hero::before {
       background-color: rgba(255, 255, 255, .8);
-   }
-
-   .menu__item-btn {
-      font-size: 22px;
    }
 
    .ingridients-wrapper {

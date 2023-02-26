@@ -90,3 +90,78 @@ menuItemsForMin.forEach((item) => {
         })
     })
 })
+const moreBtns = document.querySelectorAll('.menu__slider-slide .btn-more')
+
+const createMenuModal = (title) => {
+    const overlayEl = document.createElement('div')
+    overlayEl.classList.add('menu-overlay')
+    const modalEl = document.createElement('div')
+    modalEl.classList.add('menu-modal')
+    overlayEl.append(modalEl)
+    const modalTitle = document.createElement('h3')
+    modalTitle.classList.add('menu__slider-title')
+    modalTitle.textContent = title + ':'
+    modalEl.append(modalTitle)
+    const modalContent = document.createElement('ul')
+    modalContent.classList.add('menu-list')
+    modalContent.innerHTML = `
+        <li class="menu-list__item">
+            Ingridient 1
+        </li>
+        <li class="menu-list__item">
+            Ingridient 2
+        </li>
+        <li class="menu-list__item">
+            Ingridient 3
+        </li>
+    <div>Price: 100$</div>
+    `
+    modalEl.append(modalContent)
+    const closeBtn = document.createElement('button')
+    closeBtn.classList.add('menu-close-btn')
+    closeBtn.textContent = 'X'
+    modalContent.append(closeBtn)
+    document.body.append(overlayEl)
+    stopScroll()
+
+    overlayEl.addEventListener('click', (evt) => {
+        const target = evt.target
+        closeMenuModal(overlayEl, target)
+    })
+}
+
+const stopScroll = () => {
+    const scrollWidth = window.innerWidth - document.documentElement.clientWidth
+    document.body.style.cssText = `
+        height: 100vh;
+        overflow-y: hidden;
+        padding-right: ${scrollWidth}px;
+    `
+}
+
+const startScroll = () => {
+    document.body.style.cssText = `
+        height: ;
+        overflow-y: ;
+        padding-right: ;
+    `
+}
+
+const closeMenuModal = (overlayEl, target) => {
+    if (target.classList.contains('menu-overlay')
+        || target.classList.contains('menu-close-btn')
+    ) {
+        overlayEl.style.display = 'none'
+        overlayEl.removeEventListener('click', closeMenuModal)
+        startScroll()
+    }
+}
+
+moreBtns.forEach(btn => {
+    btn.addEventListener('click', (evt) => {
+        const target = evt.target
+        const card = target.closest('.menu__slider-slide')
+        const title = card.querySelector('.menu__slider-title').textContent
+        createMenuModal(title)
+    })
+})
