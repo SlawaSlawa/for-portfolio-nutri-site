@@ -29,7 +29,7 @@
         <script src="js/index.min.js" defer></script>
     </head>
     <body>
-        <header class="header">
+        <header class="header" id="header">
             <div class="burger">
                 <div class="burger__row"></div>
             </div>
@@ -48,22 +48,30 @@
                         <ul class="header__nav-list">
                             <li class="header__nav-item">
                                 <a
-                                    href="#"
+                                    href="#header"
                                     class="header__nav-link header__nav-link--active"
                                     >Home</a
                                 >
                             </li>
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-link">Menu</a>
+                                <a href="#menu" class="header__nav-link"
+                                    >Menu</a
+                                >
                             </li>
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-link">About</a>
+                                <a href="#ingridients" class="header__nav-link"
+                                    >About</a
+                                >
                             </li>
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-link">Contact</a>
+                                <a href="#benefits" class="header__nav-link"
+                                    >Contact</a
+                                >
                             </li>
                             <li class="header__nav-item">
-                                <a href="#" class="header__nav-link">Reviews</a>
+                                <a href="#footer" class="header__nav-link"
+                                    >Reviews</a
+                                >
                             </li>
                         </ul>
                     </nav>
@@ -71,7 +79,7 @@
             </div>
         </header>
 
-        <section class="hero">
+        <section class="hero" id="hero">
             <div class="container">
                 <div class="hero__wrapper">
                     <h1 class="section__title">
@@ -140,7 +148,7 @@
         </section>
         <!-- /HERO -->
 
-        <section class="menu">
+        <section class="menu" id="menu">
             <div class="container">
                 <div class="menu__wrapper">
                     <div class="menu__text">
@@ -706,7 +714,7 @@
         </section>
         <!-- /MENU -->
 
-        <section class="ingridients">
+        <section class="ingridients" id="ingridients">
             <div class="container">
                 <div class="ingridients-wrapper">
                     <h2 class="section__title">
@@ -733,7 +741,7 @@
         </section>
         <!-- INGRIDIENTS -->
 
-        <section class="benefits">
+        <section class="benefits" id="benefits">
             <picture class="benefits__img">
                 <img src="images/benefits-middle.svg" alt="Big Heart" />
             </picture>
@@ -937,23 +945,23 @@
         </section>
         <!-- PERSONAL -->
 
-        <footer class="footer">
+        <footer class="footer" id="footer">
             <nav class="footer__nav">
                 <ul class="footer__list">
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Home</a>
+                        <a href="#header" class="footer__link">Home</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Menu</a>
+                        <a href="#menu" class="footer__link">Menu</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">About</a>
+                        <a href="#ingridients" class="footer__link">About</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Contact</a>
+                        <a href="#benefits" class="footer__link">Contact</a>
                     </li>
                     <li class="footer__item">
-                        <a href="#" class="footer__link">Review</a>
+                        <a href="#footer" class="footer__link">Review</a>
                     </li>
                 </ul>
             </nav>

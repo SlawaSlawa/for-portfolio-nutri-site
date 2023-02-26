@@ -40,4 +40,18 @@ const menuSliderMin = new Swiper('.menu__slider-min', {
         },
     }
 })
-console.log('script3!');
+const anchors = document.querySelectorAll('.header__nav-link, .footer__link')
+
+for (let anchor of anchors) {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        navMenu.classList.remove('header__nav--active')
+        burgerBtn.classList.remove('burger--active')
+        const blockID = anchor.getAttribute('href').substr(1)
+        
+        document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+        })
+    })
+}
