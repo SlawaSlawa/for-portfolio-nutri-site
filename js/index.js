@@ -174,6 +174,7 @@ benefitsMoreBtns.forEach(btn => {
         const benefitsItem = target.closest('.benefits__item')
         const overlay = benefitsItem.querySelector('.benefits__more-info-overlay')
         overlay.style.display = 'block'
+        stopScroll()
     })
 })
 
@@ -185,6 +186,116 @@ benefitsOvelays.forEach(overlay => {
             target.classList.contains('benefits__close-btn')
         ) {
             overlay.style.display = ''
+            startScroll()
         }
     })
+})
+const URL = 'https://jsonplaceholder.typicode.com/posts'
+const getStartBtn = document.querySelector('#getStartBtn')
+const getStartFormOverlay = document.querySelector('.personal__overlay')
+const getStartForm = document.querySelector('.personal-form')
+
+const getData = ({name, age, weight, target, phone} = data) => {
+    fetch(URL, {
+        method: 'POST',
+        body: JSON.stringify({
+            name,
+            age,
+            weight,
+            target,
+            phone,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
+        })
+    .then((response) => response.json())
+    .then((json) => succesMsg(json))
+    .catch(() => errorMsg())
+}
+
+const succesMsg = ({name, age, weight, target, phone} = data) => {
+    const msgOverlay = document.createElement('div')
+    msgOverlay.classList.add('successMsg-overlay')
+    const msgEl = document.createElement('div')
+    msgEl.classList.add('success-msg')
+    msgEl.textContent = `Ваша заявка принята, скоро с Вами свяжется наш оператор`
+    msgOverlay.append(msgEl)
+    document.body.append(msgOverlay)
+
+    setTimeout(() => {
+        msgOverlay.style.display = 'none'
+    }, 2000)
+}
+
+const errorMsg = () => {
+    const msgOverlay = document.createElement('div')
+    msgOverlay.classList.add('errorMsg-overlay')
+    const msgEl = document.createElement('div')
+    msgEl.classList.add('error-msg')
+    msgEl.textContent = `Что-то пошло не так, поробуйте позже`
+    msgOverlay.append(msgEl)
+    document.body.append(msgOverlay)
+
+    setTimeout(() => {
+        msgOverlay.style.color = 'none'
+    }, 2000)
+}
+
+const validationForm = () => {
+    const labels = document.querySelectorAll('.personal-form__error-label')
+    const formElements = []
+    const flags = []
+
+    for (let item of getStartForm.elements) {
+        if (item.value) formElements.push(item)
+    }
+
+    formElements.forEach((item, index) => {
+        if (item.value.length < 2) {
+            labels[index].classList.add('personal-form__error-label--active')
+        } else {
+            labels[index].classList.remove('personal-form__error-label--active')
+            flags.push(true)
+        }
+    })
+    if (flags.length === formElements.length) return true
+}
+validationForm()
+
+getStartBtn.addEventListener('click', () => {
+    stopScroll()
+    getStartFormOverlay.style.display = 'block'
+})
+
+getStartFormOverlay.addEventListener('click', evt => {
+    const target = evt.target
+
+    if (target.classList.contains('personal__overlay') ||
+        target.classList.contains('personal-form__btn-close')
+    ) {
+        getStartFormOverlay.style.display = ''
+        startScroll()
+        getStartForm.reset()
+    }
+})
+
+getStartForm.addEventListener('submit', evt => {
+    evt.preventDefault()
+    if (validationForm()) {
+        const name = getStartForm.elements.name.value
+        const age = getStartForm.elements.age.value
+        const weight = getStartForm.elements.weight.value
+        const target = getStartForm.elements.target.value
+        const phone = getStartForm.elements.phone.value
+
+        const data = {
+            name, age, weight, target, phone,
+        }
+
+        getData(data)
+        getStartFormOverlay.style.display = ''
+        startScroll()
+        // getStartForm.reset()
+    }
 })

@@ -92,7 +92,9 @@
                         looking at its layout the generated Lorem Ipsum is
                         therefore always free from repetition.
                     </p>
-                    <button class="btn">Discover Food</button>
+                    <a href="www.nutrisite.com" class="btn" target="_blank"
+                        >Discover Food</a
+                    >
                 </div>
                 <div class="hero__comment hero__comment--one">
                     <div class="hero__comment-header">
@@ -734,8 +736,18 @@
                         popularised in the 1960s with the release of Letraset
                         sheets containing Lorem Ipsum passages...
                     </p>
-                    <button class="btn btn--see">See Diet Plan</button>
-                    <button class="btn btn--more">Learn More</button>
+                    <a
+                        href="www.nutrisite.com"
+                        class="btn btn--see"
+                        target="_blank"
+                        >See Diet Plan</a
+                    >
+                    <a
+                        href="www.nutrisite.com"
+                        class="btn btn--more"
+                        target="_blank"
+                        >Learn More</a
+                    >
                 </div>
             </div>
         </section>
@@ -1048,7 +1060,9 @@
                                 Everything your body needs, nothing it doesn’t.
                             </li>
                         </ul>
-                        <button class="btn btn--personal">Get Start</button>
+                        <button class="btn btn--personal" id="getStartBtn">
+                            Get Start
+                        </button>
                     </div>
                     <div class="personal__img-block">
                         <picture class="personal__img">
@@ -1071,6 +1085,70 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="personal__overlay">
+                <form class="personal-form">
+                    <h4 class="personal-form__title">Get Start</h4>
+                    <label for="name" class="personal-form__error-label">
+                        Вы не заполнили поле
+                    </label>
+                    <input
+                        type="text"
+                        class="personal-form__input"
+                        name="name"
+                        id="formName"
+                        placeholder="Your Name"
+                        required
+                    />
+                    <label for="age" class="personal-form__error-label">
+                        Вы не заполнили поле
+                    </label>
+                    <input
+                        type="number"
+                        class="personal-form__input"
+                        name="age"
+                        id="formAge"
+                        placeholder="Your Age"
+                        required
+                    />
+                    <label for="weight" class="personal-form__error-label">
+                        Вы не заполнили поле
+                    </label>
+                    <input
+                        type="number"
+                        class="personal-form__input"
+                        name="weight"
+                        id="formWeight"
+                        placeholder="Your Weight"
+                        required
+                    />
+                    <label for="phone" class="personal-form__error-label">
+                        Вы не заполнили поле
+                    </label>
+                    <input
+                        type="phone"
+                        class="personal-form__input"
+                        name="phone"
+                        id="formPhone"
+                        placeholder="Your Phone"
+                        required
+                    />
+                    <label for="target" class="personal-form__error-label">
+                        Вы не заполнили поле
+                    </label>
+                    <textarea
+                        id="target"
+                        name="target"
+                        class="personal-form__area"
+                        required
+                    ></textarea>
+                    <button class="personal-form__btn" type="submit">
+                        Send
+                    </button>
+                    <button class="personal-form__btn-close" type="button">
+                        X
+                    </button>
+                </form>
             </div>
         </section>
         <!-- PERSONAL -->
