@@ -165,3 +165,26 @@ moreBtns.forEach(btn => {
         createMenuModal(title)
     })
 })
+const benefitsMoreBtns = document.querySelectorAll('.btn-more--benefits')
+const benefitsOvelays = document.querySelectorAll('.benefits__more-info-overlay')
+
+benefitsMoreBtns.forEach(btn => {
+    btn.addEventListener('click', evt => {
+        const target = evt.target
+        const benefitsItem = target.closest('.benefits__item')
+        const overlay = benefitsItem.querySelector('.benefits__more-info-overlay')
+        overlay.style.display = 'block'
+    })
+})
+
+benefitsOvelays.forEach(overlay => {
+    overlay.addEventListener('click', (evt) => {
+        const target = evt.target
+
+        if (target.classList.contains('benefits__more-info-overlay') ||
+            target.classList.contains('benefits__close-btn')
+        ) {
+            overlay.style.display = ''
+        }
+    })
+})
