@@ -2236,6 +2236,8 @@ button {
 
    .btn--see,
    .btn--more {
+      display: block;
+
       width: 100%;
       margin-bottom: 20px;
 
